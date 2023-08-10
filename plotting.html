@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Table of Contents &mdash; extras 0.1.0 documentation</title>
+  <title>Plotting &mdash; extras 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -23,7 +23,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Welcome" href="welcome.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Welcome" href="welcome.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -36,7 +37,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             extras
               <img src="_static/logo_notxt.png" class="logo" alt="Logo"/>
           </a>
@@ -48,9 +49,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#boxplots">Boxplots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 
@@ -60,17 +67,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">extras</a>
+          <a href="index.html">extras</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Table of Contents</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Plotting</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/plotting.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -78,37 +85,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="table-of-contents">
-<span id="mastertoc"></span><h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="welcome.html#indices-and-tables">Indices and tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome.html#gallery">Gallery</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html#boxplots">Boxplots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="plotting.html#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#kriging">Kriging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#boundary-modeling">Boundary Modeling</a></li>
-</ul>
-</li>
-</ul>
-</div>
+  <section id="plotting">
+<span id="plots"></span><h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">¶</a></h1>
+<section id="boxplots">
+<h2>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.plots.boxplots.data_by_category">
+<span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">data_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.data_by_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert df with category to list of arrays vals + labels.</p>
+<p>Return:
+df_values (list[np.array]): array-values for each category
+df_labels (list[str]) : Categorical labels</p>
+</dd></dl>
+
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="welcome.html" class="btn btn-neutral float-right" title="Welcome" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="welcome.html" class="btn btn-neutral float-left" title="Welcome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

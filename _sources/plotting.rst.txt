@@ -1,0 +1,10 @@
+.. _plots:
+
+Plotting
+########
+
+
+Boxplots
+=========
+.. automethod:: extras.plots.boxplots.data_by_category
+
