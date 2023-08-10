@@ -1,0 +1,204 @@
+
+.. _welcome:
+
+.. image:: ./figures/logo.png
+   :align: center
+
+|
+
+|Python37| 
+
+Welcome
+=======
+
+Welcoming to automod package `(Link) <https://github.com/numpattern/automodel>`_.
+
+**Features:**
+
+* Some of the most relevant features
+* `ct.BlockModel() <togenerate.data.data.Example>`
+
+Indices and tables
+++++++++++++++++++
+
+* :ref:`genindex`
+* :ref:`mastertoc`
+* :ref:`search`
+
+.. General Package Overview
+.. ++++++++++++++++++++++++
+
+.. The automod package is designed to allow handling multiple data sources
+.. The figures blow are a general view of automod capabilities.
+
+..  .. image:: ./figures/gs_overview.jpg
+
+Gallery
++++++++
+
+.. raw:: html
+
+    <style type="text/css">
+    .rst-content
+
+    .figure {
+        position: relative;
+        float: left;
+        margin-right: 24px;
+        width: 170px;
+        height: 170px;
+        background-position: center;
+        background-size: 250px ;
+        border: 2px solid black;
+        background-repeat: no-repeat;
+    }
+
+    .figure img {
+        position: absolute;
+        display: inline;
+        left: 0;
+        width: 170px;
+        height: 170px;
+        opacity:1.0;
+        margin-right: 24px;
+        filter:alpha(opacity=100); /* For IE8 and earlier */
+    }
+
+    .figure:hover background-image {
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        opacity:1.0;
+        filter:alpha(opacity=100); /* For IE8 and earlier */
+    }
+
+    .figure span {
+        position: absolute;
+        display: inline;
+        left: 0;
+        width: 170px;
+        height: 170px;
+        background: #000;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+    }
+
+    .figure p {
+        position: absolute;
+        top: 45%;
+        width: 170px;
+        font-size: 110%;
+    }
+
+    .figure:hover span {
+        visibility: visible;
+        opacity: .4;
+    }
+
+    .caption {
+        position: absolue;
+        width: 180px;
+        top: 170px;
+        text-align: center !important;
+    }
+    </style>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center' margin=10px>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+.. raw:: html
+
+    <a href=./plotting.html#automod>
+    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+         class='figure align-center'>
+    <span class='figure-label'>
+    <p>image_label</p>
+    </span>
+    </div>
+    </a>
+
+    <div style="clear: both"></div>
+
+
+.. |Python37| image:: https://img.shields.io/badge/python-3.7-red.svg
+    :target: https://github.com/numpattern/automodel/tree/main/package
+    :alt: Python Version
+
