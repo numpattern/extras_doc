@@ -16,6 +16,7 @@ Table of Contents
 
 
    welcome.rst
+   blockmodel.rst
    plotting.rst
    examples.rst
 ..

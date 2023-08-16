@@ -1,0 +1,10 @@
+.. _blockmodel:
+
+Block Model
+###########
+
+
+Block Model
+===========
+.. autoclass:: extras.mining.blockmodel.BlockModel
+

@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Examples" href="examples.html" />
-    <link rel="prev" title="Welcome" href="welcome.html" />
+    <link rel="prev" title="Block Model" href="blockmodel.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -51,9 +51,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">Block Model</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#boxplots">Boxplots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Boxplots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category_sensitivity"><code class="docutils literal notranslate"><span class="pre">boxplots.boxplot_by_category_sensitivity()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -87,8 +92,12 @@
              
   <section id="plotting">
 <span id="plots"></span><h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">¶</a></h1>
+<p>Generalistic plots for data analysis.</p>
 <section id="boxplots">
 <h2>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this heading">¶</a></h2>
+<p>A variety of boxplots for analysis of point data.</p>
+<section id="id1">
+<h3>Boxplots<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="extras.plots.boxplots.data_by_category">
 <span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">data_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.data_by_category" title="Permalink to this definition">¶</a></dt>
@@ -98,6 +107,25 @@ df_values (list[np.array]): array-values for each category
 df_labels (list[str]) : Categorical labels</p>
 </dd></dl>
 
+<a class="reference internal image-reference" href="_images/first_plot.png"><img alt="_images/first_plot.png" class="align-center" src="_images/first_plot.png" style="width: 650.3px; height: 646.8px;" /></a>
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.plots.boxplots.boxplot_by_category_sensitivity">
+<span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulkstats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.boxplot_by_category_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grouped boxplots for one-variable grouped by categories. Useful
+for sensitivity results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dfs</strong> (<em>list</em><em>[</em><em>pd.DataFrame</em><em>]</em>) – list of DataFrame(s)</p></li>
+<li><p><strong>var</strong> (<em>str</em>) – shared variable column-name in all df in dfs</p></li>
+<li><p><strong>catcol</strong> (<em>str</em>) – shared category column in all df in dfs</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<a class="reference internal image-reference" href="_images/first_plot.png"><img alt="_images/first_plot.png" class="align-center" src="_images/first_plot.png" style="width: 650.3px; height: 646.8px;" /></a>
+</section>
 </section>
 </section>
 
@@ -105,7 +133,7 @@ df_labels (list[str]) : Categorical labels</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="welcome.html" class="btn btn-neutral float-left" title="Welcome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="blockmodel.html" class="btn btn-neutral float-left" title="Block Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
