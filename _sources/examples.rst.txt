@@ -6,7 +6,7 @@ Examples
 Collection of examples for different cases
 
 
-Introduction
+Boxplots
 ***********************
 
 .. raw:: html
@@ -15,7 +15,7 @@ Introduction
 
 |
 
-Kriging
+Grade Tonnage Curves
 ***********************
 
 .. raw:: html
@@ -24,7 +24,7 @@ Kriging
 
 |
 
-Boundary Modeling
+QQ plot
 ***********************
 
 .. raw:: html

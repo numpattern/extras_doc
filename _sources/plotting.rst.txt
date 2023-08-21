@@ -15,6 +15,8 @@ Boxplots
 .. image:: ./figures/first_plot.png
 	:scale: 70%
 	:align: center
+	
+.. autofunction:: extras.plots.boxplots.boxplot_by_category
 
 
 .. automethod:: extras.plots.boxplots.boxplot_by_category_sensitivity
