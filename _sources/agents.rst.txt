@@ -1,0 +1,20 @@
+.. _agents:
+
+Agents
+##########
+A series of tools to perform data manipulation and adaption. 
+
+Capping
+=========
+Cap data to certain values.
+
+CapAgent
++++++++++
+
+.. automodule::  extras.transformation.capping.CapAgent
+	:imported-members:
+	:members:
+
+On Progress
+===========
+

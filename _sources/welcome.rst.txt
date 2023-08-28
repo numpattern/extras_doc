@@ -11,7 +11,8 @@
 Welcome
 =======
 
-Welcoming to automod package `(Link) <https://github.com/numpattern/automodel>`_.
+Welcome to Extras package `(Link) <https://test.pypi.org/project/extras/>`_.
+
 
 **Features:**
 
@@ -28,8 +29,8 @@ Indices and tables
 .. General Package Overview
 .. ++++++++++++++++++++++++
 
-.. The automod package is designed to allow handling multiple data sources
-.. The figures blow are a general view of automod capabilities.
+.. This package is designed to allow handling multiple data sources
+.. The figures below are a general view of its capabilities.
 
 ..  .. image:: ./figures/gs_overview.jpg
 
@@ -199,6 +200,6 @@ Gallery
 
 
 .. |Python37| image:: https://img.shields.io/badge/python-3.7-red.svg
-    :target: https://github.com/numpattern/automodel/tree/main/package
+    :target: https://test.pypi.org/project/extras/
     :alt: Python Version
 

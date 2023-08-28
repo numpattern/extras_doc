@@ -1,7 +1,7 @@
 .. _plots:
 
 Plotting
-########
+###########
 Generalistic plots for data analysis. 
 
 Boxplots

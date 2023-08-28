@@ -13,11 +13,14 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 4
+   :numbered:
+   :caption: Contents:
 
+   welcome
+   blockmodel
+   agents
+   plotting
+   examples
 
-   welcome.rst
-   blockmodel.rst
-   plotting.rst
-   examples.rst
 ..
    starting.rst
