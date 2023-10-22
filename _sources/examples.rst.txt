@@ -27,7 +27,3 @@ Grade Tonnage Curves
 QQ plot
 ***********************
 
-.. raw:: html
-
-     <div class="field-item even" property="content:encoded"><iframe width="100%" height="600" src="_static/test_boxplots.html" frameborder="0" allowFullScreen="true"></iframe></div>
-
