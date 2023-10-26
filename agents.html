@@ -112,6 +112,14 @@ method.</p>
 <dt class="sig sig-object py" id="extras.transformation.capping.CapAgent.compare_unistats">
 <span class="sig-prename descclassname"><span class="pre">extras.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">compare_unistats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wt_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.transformation.capping.CapAgent.compare_unistats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a record of original_values statistics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>weights</strong> – 1-D np.array for the weights.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -182,17 +190,39 @@ It must be same length than the data.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="extras.transformation.capping.CapAgent.sensitivity_plot">
-<span class="sig-prename descclassname"><span class="pre">extras.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">sensitivity_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.transformation.capping.CapAgent.sensitivity_plot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">sensitivity_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.transformation.capping.CapAgent.sensitivity_plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a set of four plots for capping sensitivity analysis.
 Plot a user defined vertical capping line in the graph and
 show the closest response to that value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>line_at</strong> (<em>float</em>) – Value to plot a vertical line in subplots. If
-summary of the response is shown in the graph, it corresponds
-to the closest capping value to line_at</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line_at</strong> (<em>float</em>) – Value to plot a vertical line in the histogram and
+cdf subplots. If summary of the response is shown in the graph,
+it corresponds to the closest capping value to line_at</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>,</em><em>optional</em>) – title of the graph</p></li>
+<li><p><strong>lw</strong> (<em>float</em>) – width of the vertical line plotted at line_at value</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>(</em><em>float</em><em>,</em><em>float</em><em>)</em>) – figure size</p></li>
+<li><p><strong>xscale</strong> (<em>str</em>) – x-scale ‘log’ or ‘linear’ for the histogram and cdf</p></li>
+<li><p><strong>fontsize</strong> (<em>float</em>) – font size</p></li>
+<li><p><strong>ms</strong> (<em>float</em>) – marker size for third and fourth subplot</p></li>
+<li><p><strong>nbins</strong> (<em>int</em>) – number of bins for the histogram</p></li>
+</ul>
 </dd>
 </dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extras</span> <span class="k">as</span> <span class="nn">ct</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;assay_geo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">capped</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">CapAgent</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">greater_than</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cap_to</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">subset_col</span><span class="o">=</span><span class="s1">&#39;rock&#39;</span><span class="p">,</span><span class="n">subset_code</span><span class="o">=</span><span class="s1">&#39;MXPRI&#39;</span><span class="p">)</span>
+<span class="n">capped</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;CUpc&#39;</span><span class="p">)</span>
+<span class="n">capped</span><span class="o">.</span><span class="n">sensitivity</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">wt_col</span><span class="o">=</span><span class="s1">&#39;ai&#39;</span><span class="p">)</span>
+<span class="n">capped</span><span class="o">.</span><span class="n">compare_unistats</span><span class="p">()</span>
+<span class="n">capped</span><span class="o">.</span><span class="n">sensitivity_plot</span><span class="p">(</span><span class="n">line_at</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/agents-1.png" class="plot-directive" src="_images/agents-1.png" />
+</figure>
 </dd></dl>
 
 <dl class="py function">
