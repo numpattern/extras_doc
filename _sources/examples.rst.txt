@@ -3,7 +3,7 @@
 Examples
 ##################
 
-Collection of examples for different cases
+Collection of examples for different cases (work on progress)
 
 
 Boxplots

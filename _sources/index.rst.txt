@@ -20,7 +20,6 @@ Table of Contents
    blockmodel
    agents
    plotting
-   examples
 
 ..
    starting.rst
