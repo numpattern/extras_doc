@@ -63,6 +63,13 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#bar-charts">4.2. Bar Charts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drilling">4.2.1. Drilling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.drilling.drilling_by_year"><code class="docutils literal notranslate"><span class="pre">drilling.drilling_by_year()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -171,6 +178,54 @@ for sensitivity results.</p>
 <img alt="_images/plotting-2.png" class="plot-directive" src="_images/plotting-2.png" />
 </figure>
 </div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+<section id="bar-charts">
+<h2><span class="section-number">4.2. </span>Bar Charts<a class="headerlink" href="#bar-charts" title="Permalink to this heading">¶</a></h2>
+<p>Bar Charts.</p>
+<section id="drilling">
+<h3><span class="section-number">4.2.1. </span>Drilling<a class="headerlink" href="#drilling" title="Permalink to this heading">¶</a></h3>
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.plots.drilling.drilling_by_year">
+<span class="sig-prename descclassname"><span class="pre">drilling.</span></span><span class="sig-name descname"><span class="pre">drilling_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(14,</span> <span class="pre">4)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legend_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.drilling.drilling_by_year" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Generates a stacked bar plot by based on a continuous variable</dt><dd><p>and two categorical columns.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – df with continuous variable
+and two categorical columns</p></li>
+<li><p><strong>var</strong> (<em>float</em>) – Continuous variable to summarize sums</p></li>
+<li><p><strong>cat</strong> (<em>str</em>) – Column name for categorical that contains a sequence
+of integers to use in the bar chart. e.g. years</p></li>
+<li><p><strong>cat2</strong> (<em>str</em>) – Column name for categorical values to be stacked</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>,</em><em>optional</em>) – x-axis label</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>,</em><em>optional</em>) – y-axis label</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>,</em><em>optional</em>) – title for the plot</p></li>
+<li><p><strong>flname</strong> (<em>str</em><em>,</em><em>optional</em>) – path to save image</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em>) – figure size</p></li>
+<li><p><strong>cat2_colors</strong> (<em>dict</em>) – dictionary for user defined colors.</p></li>
+<li><p><strong>legend_loc</strong> (<em>int</em>) – position of the legend</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – with of the bars in the bar chart</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extras</span> <span class="k">as</span> <span class="nn">ct</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;collar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">drill_type</span><span class="o">=</span> <span class="s1">&#39;drilltype&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">drill_type</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span><span class="n">drill_type</span><span class="p">]</span><span class="o">=</span> <span class="s1">&#39;Undefined&#39;</span>
+<span class="n">ct</span><span class="o">.</span><span class="n">drilling_by_year</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">var</span><span class="o">=</span><span class="s1">&#39;length&#39;</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">cat2</span><span class="o">=</span><span class="n">drill_type</span><span class="p">,</span>
+           <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Collar year&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Length Drilled&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/plotting-3.png" class="plot-directive" src="_images/plotting-3.png" />
+</figure>
 </dd></dl>
 
 </section>

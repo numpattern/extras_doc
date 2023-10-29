@@ -15,6 +15,14 @@ Boxplots
 .. autofunction:: extras.plots.boxplots.boxplot_by_category
 .. automethod:: extras.plots.boxplots.boxplot_by_category_sensitivity
 
+Bar Charts
+==========
+Bar Charts.
+
+Drilling 
++++++++++
+
+.. automethod:: extras.plots.drilling.drilling_by_year
 
 
 
