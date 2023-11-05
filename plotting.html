@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Plotting &mdash; extras 0.1.0 documentation</title>
+  <title>6. Plotting &mdash; extras 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -23,7 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="3. Agents" href="agents.html" />
+    <link rel="prev" title="5. Agents" href="agents.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -51,11 +51,13 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">2. Block Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">3. Agents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Plotting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#boxplots">4.1. Boxplots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">4.1.1. Boxplots</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">2. Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drillholes.html">3. Drillholes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">4. Block Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agents.html">5. Agents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Plotting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#boxplots">6.1. Boxplots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">6.1.1. Boxplots</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category"><code class="docutils literal notranslate"><span class="pre">boxplot_by_category()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category_sensitivity"><code class="docutils literal notranslate"><span class="pre">boxplots.boxplot_by_category_sensitivity()</span></code></a></li>
@@ -63,8 +65,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#bar-charts">4.2. Bar Charts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#drilling">4.2.1. Drilling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bar-charts">6.2. Bar Charts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drilling">6.2.1. Drilling</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#extras.plots.drilling.drilling_by_year"><code class="docutils literal notranslate"><span class="pre">drilling.drilling_by_year()</span></code></a></li>
 </ul>
 </li>
@@ -88,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4. </span>Plotting</li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Plotting</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/plotting.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -99,13 +101,13 @@
            <div itemprop="articleBody">
              
   <section id="plotting">
-<span id="plots"></span><h1><span class="section-number">4. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">¶</a></h1>
+<span id="plots"></span><h1><span class="section-number">6. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">¶</a></h1>
 <p>Generalistic plots for data analysis.</p>
 <section id="boxplots">
-<h2><span class="section-number">4.1. </span>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this heading">¶</a></h2>
 <p>A variety of boxplots for analysis of point data.</p>
 <section id="id1">
-<h3><span class="section-number">4.1.1. </span>Boxplots<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>Boxplots<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="extras.plots.boxplots.data_by_category">
 <span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">data_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.data_by_category" title="Permalink to this definition">¶</a></dt>
@@ -183,10 +185,10 @@ for sensitivity results.</p>
 </section>
 </section>
 <section id="bar-charts">
-<h2><span class="section-number">4.2. </span>Bar Charts<a class="headerlink" href="#bar-charts" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Bar Charts<a class="headerlink" href="#bar-charts" title="Permalink to this heading">¶</a></h2>
 <p>Bar Charts.</p>
 <section id="drilling">
-<h3><span class="section-number">4.2.1. </span>Drilling<a class="headerlink" href="#drilling" title="Permalink to this heading">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Drilling<a class="headerlink" href="#drilling" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="extras.plots.drilling.drilling_by_year">
 <span class="sig-prename descclassname"><span class="pre">drilling.</span></span><span class="sig-name descname"><span class="pre">drilling_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(14,</span> <span class="pre">4)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legend_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.drilling.drilling_by_year" title="Permalink to this definition">¶</a></dt>
@@ -236,7 +238,7 @@ of integers to use in the bar chart. e.g. years</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="agents.html" class="btn btn-neutral float-left" title="3. Agents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="agents.html" class="btn btn-neutral float-left" title="5. Agents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

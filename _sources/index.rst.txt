@@ -17,6 +17,8 @@ Table of Contents
    :caption: Contents:
 
    welcome
+   statistics
+   drillholes
    blockmodel
    agents
    plotting

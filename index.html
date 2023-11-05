@@ -51,9 +51,11 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">2. Block Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">3. Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">4. Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">2. Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drillholes.html">3. Drillholes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">4. Block Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agents.html">5. Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">6. Plotting</a></li>
 </ul>
 
         </div>
@@ -90,16 +92,39 @@
 <li class="toctree-l2"><a class="reference internal" href="welcome.html#gallery">1.2. Gallery</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">2. Block Model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blockmodel.html#id1">2.1. Block Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.mining.blockmodel.BlockModel"><code class="docutils literal notranslate"><span class="pre">BlockModel</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">2. Statistics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="statistics.html#id2">2.1. Statistics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="statistics.html#extras.statistics.table_statistics.stats_contvar_cat"><code class="docutils literal notranslate"><span class="pre">table_statistics.stats_contvar_cat()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">3. Agents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="agents.html#capping">3.1. Capping</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="agents.html#module-extras.transformation.capping.CapAgent">3.1.1. CapAgent</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="drillholes.html">3. Drillholes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drillholes.html#module-extras.drillholes.integrity.interval_integrity">3.1. Integrity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drillholes.html#functions">3.2. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="drillholes.html#extras.drillholes.split_interval.split_intervals"><code class="docutils literal notranslate"><span class="pre">split_interval.split_intervals()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">4. Block Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blockmodel.html#id1">4.1. Block Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.blockmodel.BlockModel.report"><code class="docutils literal notranslate"><span class="pre">report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blockmodel.html#flattening">4.2. Flattening</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.flatten.project_points"><code class="docutils literal notranslate"><span class="pre">flatten.project_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.flatten.project_model"><code class="docutils literal notranslate"><span class="pre">flatten.project_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.flatten.upscale_bm"><code class="docutils literal notranslate"><span class="pre">flatten.upscale_bm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.flatten.gslib2coord"><code class="docutils literal notranslate"><span class="pre">flatten.gslib2coord()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockmodel.html#extras.blockmodel.flatten.coord2gslib"><code class="docutils literal notranslate"><span class="pre">flatten.coord2gslib()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="agents.html">5. Agents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="agents.html#capping">5.1. Capping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="agents.html#module-extras.transformation.capping.CapAgent">5.1.1. CapAgent</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="agents.html#extras.transformation.capping.CapAgent.compare_unistats"><code class="docutils literal notranslate"><span class="pre">compare_unistats()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="agents.html#extras.transformation.capping.CapAgent.fit"><code class="docutils literal notranslate"><span class="pre">fit()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="agents.html#extras.transformation.capping.CapAgent.fit_transform"><code class="docutils literal notranslate"><span class="pre">fit_transform()</span></code></a></li>
@@ -110,12 +135,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="agents.html#on-progress">3.2. On Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="agents.html#on-progress">5.2. On Progress</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">4. Plotting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html#boxplots">4.1. Boxplots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="plotting.html#id1">4.1.1. Boxplots</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">6. Plotting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#boxplots">6.1. Boxplots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plotting.html#id1">6.1.1. Boxplots</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="plotting.html#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="plotting.html#extras.plots.boxplots.boxplot_by_category"><code class="docutils literal notranslate"><span class="pre">boxplot_by_category()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="plotting.html#extras.plots.boxplots.boxplot_by_category_sensitivity"><code class="docutils literal notranslate"><span class="pre">boxplots.boxplot_by_category_sensitivity()</span></code></a></li>
@@ -123,8 +148,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plotting.html#bar-charts">4.2. Bar Charts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="plotting.html#drilling">4.2.1. Drilling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#bar-charts">6.2. Bar Charts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plotting.html#drilling">6.2.1. Drilling</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="plotting.html#extras.plots.drilling.drilling_by_year"><code class="docutils literal notranslate"><span class="pre">drilling.drilling_by_year()</span></code></a></li>
 </ul>
 </li>

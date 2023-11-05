@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Block Model &mdash; extras 0.1.0 documentation</title>
+  <title>4. Block Model &mdash; extras 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Agents" href="agents.html" />
-    <link rel="prev" title="1. Welcome" href="welcome.html" />
+    <link rel="next" title="5. Agents" href="agents.html" />
+    <link rel="prev" title="3. Drillholes" href="drillholes.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -52,15 +52,25 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Block Model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. Block Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#extras.mining.blockmodel.BlockModel"><code class="docutils literal notranslate"><span class="pre">BlockModel</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">2. Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drillholes.html">3. Drillholes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Block Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. Block Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.blockmodel.BlockModel.report"><code class="docutils literal notranslate"><span class="pre">report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#flattening">4.2. Flattening</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_points"><code class="docutils literal notranslate"><span class="pre">flatten.project_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_model"><code class="docutils literal notranslate"><span class="pre">flatten.project_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.upscale_bm"><code class="docutils literal notranslate"><span class="pre">flatten.upscale_bm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.gslib2coord"><code class="docutils literal notranslate"><span class="pre">flatten.gslib2coord()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.coord2gslib"><code class="docutils literal notranslate"><span class="pre">flatten.coord2gslib()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">3. Agents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">4. Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agents.html">5. Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">6. Plotting</a></li>
 </ul>
 
         </div>
@@ -77,7 +87,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2. </span>Block Model</li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Block Model</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/blockmodel.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -88,13 +98,176 @@
            <div itemprop="articleBody">
              
   <section id="block-model">
-<span id="blockmodel"></span><h1><span class="section-number">2. </span>Block Model<a class="headerlink" href="#block-model" title="Permalink to this heading">¶</a></h1>
+<span id="blockmodel"></span><h1><span class="section-number">4. </span>Block Model<a class="headerlink" href="#block-model" title="Permalink to this heading">¶</a></h1>
 <section id="id1">
-<h2><span class="section-number">2.1. </span>Block Model<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="extras.mining.blockmodel.BlockModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">extras.mining.blockmodel.</span></span><span class="sig-name descname"><span class="pre">BlockModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.mining.blockmodel.BlockModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Report resources using block model data.</p>
+<h2><span class="section-number">4.1. </span>Block Model<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<span class="target" id="module-extras.blockmodel.blockmodel.BlockModel"></span><p>In-progress Block Model Class with some functionalities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param dx<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dimension in x-direction column</p>
+</dd>
+<dt class="field-even">type dx<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param dy<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dimension in y-direction column</p>
+</dd>
+<dt class="field-even">type dy<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param dz<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dimension in z-direction column</p>
+</dd>
+<dt class="field-even">type dz<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="extras.blockmodel.blockmodel.BlockModel.report">
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.blockmodel.BlockModel.</span></span><span class="sig-name descname"><span class="pre">report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mined_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classif_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">otype_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mass'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">below_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.blockmodel.BlockModel.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate resource report from a block model. User must ensure
+dx, dy, and dz units meet density_col units.
+Values &lt; cutoff are trimmed out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vars</strong> (<em>dict/list</em>) – If dictionary is given, keys: grade variables
+column names.
+If list is given, items are column names in df</p></li>
+<li><p><strong>density_col</strong> (<em>str</em>) – density column</p></li>
+<li><p><strong>mined_out</strong> (<em>dict</em><em>,</em><em>optional</em>) – Key(str): column name of the mined out values.
+Value(list[str or float]): Codes</p></li>
+<li><p><strong>classif_code</strong> (<em>dict</em><em>,</em><em>optional</em>) – Key(str): column name for classification values
+Value(list[str or float]): Codes</p></li>
+<li><p><strong>otype_code</strong> (<em>dict</em><em>,</em><em>optional</em>) – Key(str): column name of the ore type values
+Value(list[str or float]): Codes</p></li>
+<li><p><strong>mass_col</strong> (<em>str</em><em>,</em><em>optional</em>) – column name was mass to be considered in the output</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Resource reporting</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self.summary(pd.DataFrame)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="flattening">
+<h2><span class="section-number">4.2. </span>Flattening<a class="headerlink" href="#flattening" title="Permalink to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.blockmodel.flatten.project_points">
+<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">project_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project 3D points using a dictionary of keys to coord
+generated from a block model projection. All keys must be in
+points keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>pd.DataFrame</em>) – composite points</p></li>
+<li><p><strong>bm</strong> (<em>np.array</em>) – array containing multiple xyz coordinates</p></li>
+<li><p><strong>keys</strong> (<em>dict</em>) – Obtained from project_model. Keys: pair of coordinates,
+Values: minimum coordinate at the projected axis</p></li>
+<li><p><strong>xcol</strong> (<em>str</em>) – x-coordinate column in points</p></li>
+<li><p><strong>ycol</strong> (<em>str</em>) – y-coordinate column in points</p></li>
+<li><p><strong>zcol</strong> (<em>str</em>) – z-coordinate column in points</p></li>
+<li><p><strong>projected_axis</strong> (<em>str</em>) – Projection happens perpendicular to this axis
+to the minimum direction. x, y or z</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – additional delta added after projection</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.blockmodel.flatten.project_model">
+<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">project_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten a block model by projecting aligned to one of its
+grid axis. Projection in direction of minimum coordinate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>pd.DataFrame</em>) – Grid Model</p></li>
+<li><p><strong>xcol</strong> (<em>str</em>) – x-coordinate column in grid</p></li>
+<li><p><strong>ycol</strong> (<em>str</em>) – y-coordinate column in grid</p></li>
+<li><p><strong>zcol</strong> (<em>str</em>) – z-coordinate column in grid</p></li>
+<li><p><strong>projected_axis</strong> (<em>str</em>) – Projection happens perpendicular to this axis
+to the minimum direction. Valids are x, y or z</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – additional delta added after projection</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.blockmodel.flatten.upscale_bm">
+<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">upscale_bm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.upscale_bm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upscale a block model. It imposes coarse block indexes to
+df coordinates -&gt; xin yin zin = 1. It potentially give (1,0,1) if using
+external coarse blocks outside of df coordinates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – </p></li>
+<li><p><strong>grid_in</strong> (<em>gs.GridDef</em>) – Fine Grid Definition</p></li>
+<li><p><strong>grid_out</strong> (<em>gs.GridDef</em>) – Coarse Grid Definition</p></li>
+<li><p><strong>x</strong> (<em>str</em>) – x-coordinate column in df</p></li>
+<li><p><strong>y</strong> (<em>str</em>) – y-coordinate column in df</p></li>
+<li><p><strong>z</strong> (<em>str</em>) – z-coordinate column in df</p></li>
+<li><p><strong>var</strong> (<em>str</em>) – variable column to average up in df</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Upscaled model to grid_out.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>upscaled (pd.DataFrame)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.blockmodel.flatten.gslib2coord">
+<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">gslib2coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.gslib2coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a gslib model into xyz coordinates model. Unlike
+gslib addcoord, it is vectorized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>gs.DataFile</em>) – GSLIB model</p></li>
+<li><p><strong>var</strong> (<em>str</em>) – variable in df</p></li>
+<li><p><strong>griddef</strong> (<em>gs.GridDef</em>) – grid definition</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="extras.blockmodel.flatten.coord2gslib">
+<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">coord2gslib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.coord2gslib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an XYZ model into GSLIB model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – </p></li>
+<li><p><strong>x</strong> (<em>str</em>) – x-coordinate column in df</p></li>
+<li><p><strong>y</strong> (<em>str</em>) – y-coordinate column in df</p></li>
+<li><p><strong>z</strong> (<em>str</em>) – z-coordinate column in df</p></li>
+<li><p><strong>griddef</strong> (<em>gs.GridDef</em>) – Grid definition</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>GSLIB model where indexes</dt><dd><p>align with GSLIB griddefinition</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gslib_model (pd.DataFrame)</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -104,8 +277,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="welcome.html" class="btn btn-neutral float-left" title="1. Welcome" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="agents.html" class="btn btn-neutral float-right" title="3. Agents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="drillholes.html" class="btn btn-neutral float-left" title="3. Drillholes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="agents.html" class="btn btn-neutral float-right" title="5. Agents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

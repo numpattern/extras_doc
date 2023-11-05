@@ -1,0 +1,15 @@
+.. _drillholes:
+
+Drillholes
+##########
+
+Integrity
+=========
+
+.. automodule::  extras.drillholes.integrity.interval_integrity
+	:imported-members:
+	:members:
+
+Functions
+=========
+.. automethod:: extras.drillholes.split_interval.split_intervals

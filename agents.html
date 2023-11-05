@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Agents &mdash; extras 0.1.0 documentation</title>
+  <title>5. Agents &mdash; extras 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Plotting" href="plotting.html" />
-    <link rel="prev" title="2. Block Model" href="blockmodel.html" />
+    <link rel="next" title="6. Plotting" href="plotting.html" />
+    <link rel="prev" title="4. Block Model" href="blockmodel.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -52,10 +52,12 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="welcome.html">1. Welcome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">2. Block Model</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Agents</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#capping">3.1. Capping</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-extras.transformation.capping.CapAgent">3.1.1. CapAgent</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">2. Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drillholes.html">3. Drillholes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockmodel.html">4. Block Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Agents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#capping">5.1. Capping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-extras.transformation.capping.CapAgent">5.1.1. CapAgent</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#extras.transformation.capping.CapAgent.compare_unistats"><code class="docutils literal notranslate"><span class="pre">compare_unistats()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extras.transformation.capping.CapAgent.fit"><code class="docutils literal notranslate"><span class="pre">fit()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extras.transformation.capping.CapAgent.fit_transform"><code class="docutils literal notranslate"><span class="pre">fit_transform()</span></code></a></li>
@@ -66,10 +68,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#on-progress">3.2. On Progress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-progress">5.2. On Progress</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">4. Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">6. Plotting</a></li>
 </ul>
 
         </div>
@@ -86,7 +88,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3. </span>Agents</li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Agents</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/agents.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,13 +99,13 @@
            <div itemprop="articleBody">
              
   <section id="agents">
-<span id="id1"></span><h1><span class="section-number">3. </span>Agents<a class="headerlink" href="#agents" title="Permalink to this heading">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">5. </span>Agents<a class="headerlink" href="#agents" title="Permalink to this heading">¶</a></h1>
 <p>A series of tools to perform data manipulation and adaption.</p>
 <section id="capping">
-<h2><span class="section-number">3.1. </span>Capping<a class="headerlink" href="#capping" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Capping<a class="headerlink" href="#capping" title="Permalink to this heading">¶</a></h2>
 <p>Cap data to certain values.</p>
 <section id="module-extras.transformation.capping.CapAgent">
-<span id="capagent"></span><h3><span class="section-number">3.1.1. </span>CapAgent<a class="headerlink" href="#module-extras.transformation.capping.CapAgent" title="Permalink to this heading">¶</a></h3>
+<span id="capagent"></span><h3><span class="section-number">5.1.1. </span>CapAgent<a class="headerlink" href="#module-extras.transformation.capping.CapAgent" title="Permalink to this heading">¶</a></h3>
 <p>Class for capping. The class can be instantiated without specific
 parameters. Arguments can be later specified with self.fit()
 method.</p>
@@ -242,7 +244,7 @@ It must be same length than the data.</p></li>
 </section>
 </section>
 <section id="on-progress">
-<h2><span class="section-number">3.2. </span>On Progress<a class="headerlink" href="#on-progress" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">5.2. </span>On Progress<a class="headerlink" href="#on-progress" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -250,8 +252,8 @@ It must be same length than the data.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="blockmodel.html" class="btn btn-neutral float-left" title="2. Block Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="plotting.html" class="btn btn-neutral float-right" title="4. Plotting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="blockmodel.html" class="btn btn-neutral float-left" title="4. Block Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotting.html" class="btn btn-neutral float-right" title="6. Plotting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

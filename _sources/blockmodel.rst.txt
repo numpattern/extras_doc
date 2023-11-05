@@ -6,5 +6,16 @@ Block Model
 
 Block Model
 ===========
-.. autoclass:: extras.mining.blockmodel.BlockModel
 
+.. automodule::  extras.blockmodel.blockmodel.BlockModel
+	:imported-members:
+	:members:
+
+
+Flattening
+===========
+.. automethod:: extras.blockmodel.flatten.project_points
+.. automethod:: extras.blockmodel.flatten.project_model
+.. automethod:: extras.blockmodel.flatten.upscale_bm
+.. automethod:: extras.blockmodel.flatten.gslib2coord
+.. automethod:: extras.blockmodel.flatten.coord2gslib

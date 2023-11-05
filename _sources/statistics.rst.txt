@@ -1,0 +1,10 @@
+.. _statistics:
+
+Statistics
+###########
+
+
+Statistics
+===========
+
+.. automethod:: extras.statistics.table_statistics.stats_contvar_cat
