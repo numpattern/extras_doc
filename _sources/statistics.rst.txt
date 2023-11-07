@@ -7,4 +7,4 @@ Statistics
 Statistics
 ===========
 
-.. automethod:: extras.statistics.table_statistics.stats_contvar_cat
+.. autofunction:: extras.statistics.table_statistics.stats_contvar_cat

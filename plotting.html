@@ -58,18 +58,34 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6. Plotting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#boxplots">6.1. Boxplots</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">6.1.1. Boxplots</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">boxplots.data_by_category()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.data_by_category"><code class="docutils literal notranslate"><span class="pre">data_by_category()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category"><code class="docutils literal notranslate"><span class="pre">boxplot_by_category()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category_sensitivity"><code class="docutils literal notranslate"><span class="pre">boxplots.boxplot_by_category_sensitivity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.boxplots.boxplot_by_category_sensitivity"><code class="docutils literal notranslate"><span class="pre">boxplot_by_category_sensitivity()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#bar-charts">6.2. Bar Charts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#drilling">6.2.1. Drilling</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#extras.plots.drilling.drilling_by_year"><code class="docutils literal notranslate"><span class="pre">drilling.drilling_by_year()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.drilling.drilling_by_year"><code class="docutils literal notranslate"><span class="pre">drilling_by_year()</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scatters">6.3. Scatters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resource-model">6.3.1. Resource Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.tongrad.tonnage_grade_curve"><code class="docutils literal notranslate"><span class="pre">tonnage_grade_curve()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#distributions">6.3.2. Distributions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.qqplot.qq_plot"><code class="docutils literal notranslate"><span class="pre">qq_plot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extras.plots.probability_plot.probability_plot"><code class="docutils literal notranslate"><span class="pre">probability_plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sensitivity">6.4. Sensitivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extras.plots.deviation.deviation_plot"><code class="docutils literal notranslate"><span class="pre">deviation_plot()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -108,9 +124,9 @@
 <p>A variety of boxplots for analysis of point data.</p>
 <section id="id1">
 <h3><span class="section-number">6.1.1. </span>Boxplots<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.plots.boxplots.data_by_category">
-<span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">data_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.data_by_category" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">data_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.data_by_category" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert df with category to list of arrays vals + labels.</p>
 <p>Return:
 df_values (list[np.array]): array-values for each category
@@ -149,9 +165,9 @@ statistics.</p>
 </div></blockquote>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.plots.boxplots.boxplot_by_category_sensitivity">
-<span class="sig-prename descclassname"><span class="pre">boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulkstats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.boxplot_by_category_sensitivity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulkstats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.boxplots.boxplot_by_category_sensitivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grouped boxplots for one-variable grouped by categories. Useful
 for sensitivity results.</p>
 <dl class="field-list simple">
@@ -189,9 +205,9 @@ for sensitivity results.</p>
 <p>Bar Charts.</p>
 <section id="drilling">
 <h3><span class="section-number">6.2.1. </span>Drilling<a class="headerlink" href="#drilling" title="Permalink to this heading">¶</a></h3>
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.plots.drilling.drilling_by_year">
-<span class="sig-prename descclassname"><span class="pre">drilling.</span></span><span class="sig-name descname"><span class="pre">drilling_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(14,</span> <span class="pre">4)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legend_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.drilling.drilling_by_year" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.plots.drilling.</span></span><span class="sig-name descname"><span class="pre">drilling_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(14,</span> <span class="pre">4)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat2_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legend_loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.drilling.drilling_by_year" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Generates a stacked bar plot by based on a continuous variable</dt><dd><p>and two categorical columns.</p>
 </dd>
@@ -231,6 +247,120 @@ of integers to use in the bar chart. e.g. years</p></li>
 </dd></dl>
 
 </section>
+</section>
+<section id="scatters">
+<h2><span class="section-number">6.3. </span>Scatters<a class="headerlink" href="#scatters" title="Permalink to this heading">¶</a></h2>
+<p>Scatter plots.</p>
+<section id="resource-model">
+<h3><span class="section-number">6.3.1. </span>Resource Model<a class="headerlink" href="#resource-model" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="extras.plots.tongrad.tonnage_grade_curve">
+<span class="sig-prename descclassname"><span class="pre">extras.plots.tongrad.</span></span><span class="sig-name descname"><span class="pre">tonnage_grade_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoffs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(5,</span> <span class="pre">4)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.tongrad.tonnage_grade_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate tonnage-grade curve for one df of multiple dfs.
+For multiple variables within each df.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dfs</strong> (<em>df</em><em> or </em><em>list</em><em>[</em><em>df</em><em>]</em>) – Data with a at least one column of values</p></li>
+<li><p><strong>var_col</strong> (<em>str</em><em> or </em><em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – column-name(s) of variables in a df</p></li>
+<li><p><strong>cutoffs</strong> (<em>list</em><em>[</em><em>float</em><em>]</em><em>,</em><em>optional</em>) – cut-offs values. If None, 100 cutoffs between
+min-max values are chosen</p></li>
+<li><p><strong>weight_col</strong> (<em>str</em><em>,</em><em>optional</em>) – column-name if all dfs with values
+to weight the grade values. WARINING: Al df’s must have the same
+weight_col name.</p></li>
+<li><p><strong>as_fraction</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, it shows tonnage axis as 0-1 fraction.
+If False, shows summ of the weights.</p></li>
+<li><p><strong>ylim1</strong> (<em>tuple</em>) – limit values for main y-axis (weight sum)</p></li>
+<li><p><strong>ylim2</strong> (<em>tuple</em>) – limit values for secondary y_axis (average grades above cutoff)</p></li>
+<li><p><strong>xlim</strong> (<em>tuple</em>) – limit values for x-axis (cutoffs)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – plot title</p></li>
+<li><p><strong>flanme</strong> (<em>str</em>) – path to store plot. It does not create folders</p></li>
+<li><p><strong>fontsize</strong> (<em>float</em>) – overall font size</p></li>
+<li><p><strong>lw</strong> (<em>float</em>) – line width for GT curves</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em>) – figsize</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="distributions">
+<h3><span class="section-number">6.3.2. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="extras.plots.qqplot.qq_plot">
+<span class="sig-prename descclassname"><span class="pre">extras.plots.qqplot.</span></span><span class="sig-name descname"><span class="pre">qq_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontdict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.qqplot.qq_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>QQ-plot with two given distributions. Lengths of the distributions may
+be different. Alternatively add percentiles and summary stats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d1</strong> (<em>np.array</em><em> or </em><em>list</em><em>[</em><em>float</em><em>]</em>) – distribution in x-axis</p></li>
+<li><p><strong>d2</strong> (<em>np.array</em><em> or </em><em>list</em><em>[</em><em>float</em><em>]</em>) – distribution in y-axis</p></li>
+<li><p><strong>percentiles</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – percentiles from 0-100 included</p></li>
+<li><p><strong>ms</strong> (<em>float</em>) – marker size</p></li>
+<li><p><strong>xlim</strong> (<em>tuple</em><em>[</em><em>float</em><em>]</em>) – x-axis limits</p></li>
+<li><p><strong>ylim</strong> (<em>tuple</em><em>[</em><em>float</em><em>]</em>) – y-axis limits</p></li>
+<li><p><strong>flname</strong> (<em>str</em>) – path to save plot</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – figure size</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="extras.plots.probability_plot.probability_plot">
+<span class="sig-prename descclassname"><span class="pre">extras.plots.probability_plot.</span></span><span class="sig-name descname"><span class="pre">probability_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.probability_plot.probability_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a probability plot of an input distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – input data to plot</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em>) – Figure size</p></li>
+<li><p><strong>xscale</strong> (<em>str</em>) – x-axis scale, it can be ‘log’ or ‘linear’</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extras</span> <span class="k">as</span> <span class="nn">ct</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;assay_geo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">probability_plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CUpc&#39;</span><span class="p">],</span><span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/plotting-4.png" class="plot-directive" src="_images/plotting-4.png" />
+</figure>
+</div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+<section id="sensitivity">
+<h2><span class="section-number">6.4. </span>Sensitivity<a class="headerlink" href="#sensitivity" title="Permalink to this heading">¶</a></h2>
+<p>Sensitivity plots.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="extras.plots.deviation.deviation_plot">
+<span class="sig-prename descclassname"><span class="pre">extras.plots.deviation.</span></span><span class="sig-name descname"><span class="pre">deviation_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hline_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.plots.deviation.deviation_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot deviations with respect a base value after performing a
+sensitivity analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – x values of the sensitivities</p></li>
+<li><p><strong>y</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – results  from the multiple x-values</p></li>
+<li><p><strong>base</strong> (<em>float</em>) – Reference value around where deviation is calculated.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – title of the graph</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 

@@ -14,7 +14,3 @@ CapAgent
 .. automodule::  extras.transformation.capping.CapAgent
 	:imported-members:
 	:members:
-
-On Progress
-===========
-

@@ -3,7 +3,6 @@
 Block Model
 ###########
 
-
 Block Model
 ===========
 
@@ -11,11 +10,10 @@ Block Model
 	:imported-members:
 	:members:
 
-
 Flattening
 ===========
-.. automethod:: extras.blockmodel.flatten.project_points
-.. automethod:: extras.blockmodel.flatten.project_model
-.. automethod:: extras.blockmodel.flatten.upscale_bm
-.. automethod:: extras.blockmodel.flatten.gslib2coord
-.. automethod:: extras.blockmodel.flatten.coord2gslib
+.. autofunction:: extras.blockmodel.flatten.project_points
+.. autofunction:: extras.blockmodel.flatten.project_model
+.. autofunction:: extras.blockmodel.flatten.upscale_bm
+.. autofunction:: extras.blockmodel.flatten.gslib2coord
+.. autofunction:: extras.blockmodel.flatten.coord2gslib

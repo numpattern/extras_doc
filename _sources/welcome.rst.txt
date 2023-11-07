@@ -1,8 +1,9 @@
 
 .. _welcome:
 
-.. image:: ./figures/logo.png
+.. image:: ./figures/logo_white_bg.png
    :align: center
+   :width: 600
 
 |
 
@@ -12,11 +13,10 @@ Welcome
 =======
 
 Welcome to Extras package `(Link) <https://test.pypi.org/project/extras/>`_. This is
-an educational Python package for resource estimation related tasks. For more information 
-contact the developer.
+an educational Python package for resource geologists and tasks related during data
+analysis. For more information contact the author.
 
 **Features:**
-
 
 Indices and tables
 ++++++++++++++++++

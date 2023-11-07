@@ -12,4 +12,4 @@ Integrity
 
 Functions
 =========
-.. automethod:: extras.drillholes.split_interval.split_intervals
+.. autofunction:: extras.drillholes.split_interval.split_intervals

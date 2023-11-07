@@ -60,11 +60,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#flattening">4.2. Flattening</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_points"><code class="docutils literal notranslate"><span class="pre">flatten.project_points()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_model"><code class="docutils literal notranslate"><span class="pre">flatten.project_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.upscale_bm"><code class="docutils literal notranslate"><span class="pre">flatten.upscale_bm()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.gslib2coord"><code class="docutils literal notranslate"><span class="pre">flatten.gslib2coord()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.coord2gslib"><code class="docutils literal notranslate"><span class="pre">flatten.coord2gslib()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_points"><code class="docutils literal notranslate"><span class="pre">project_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.project_model"><code class="docutils literal notranslate"><span class="pre">project_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.upscale_bm"><code class="docutils literal notranslate"><span class="pre">upscale_bm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.gslib2coord"><code class="docutils literal notranslate"><span class="pre">gslib2coord()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extras.blockmodel.flatten.coord2gslib"><code class="docutils literal notranslate"><span class="pre">coord2gslib()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -156,9 +156,9 @@ Value(list[str or float]): Codes</p></li>
 </section>
 <section id="flattening">
 <h2><span class="section-number">4.2. </span>Flattening<a class="headerlink" href="#flattening" title="Permalink to this heading">¶</a></h2>
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.project_points">
-<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">project_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_points" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">project_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Project 3D points using a dictionary of keys to coord
 generated from a block model projection. All keys must be in
 points keys.</p>
@@ -180,9 +180,9 @@ to the minimum direction. x, y or z</p></li>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.project_model">
-<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">project_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">project_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flatten a block model by projecting aligned to one of its
 grid axis. Projection in direction of minimum coordinate.</p>
 <dl class="field-list simple">
@@ -200,9 +200,9 @@ to the minimum direction. Valids are x, y or z</p></li>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.upscale_bm">
-<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">upscale_bm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.upscale_bm" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">upscale_bm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.upscale_bm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upscale a block model. It imposes coarse block indexes to
 df coordinates -&gt; xin yin zin = 1. It potentially give (1,0,1) if using
 external coarse blocks outside of df coordinates</p>
@@ -227,9 +227,9 @@ external coarse blocks outside of df coordinates</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.gslib2coord">
-<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">gslib2coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.gslib2coord" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">gslib2coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.gslib2coord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a gslib model into xyz coordinates model. Unlike
 gslib addcoord, it is vectorized.</p>
 <dl class="field-list simple">
@@ -243,9 +243,9 @@ gslib addcoord, it is vectorized.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.coord2gslib">
-<span class="sig-prename descclassname"><span class="pre">flatten.</span></span><span class="sig-name descname"><span class="pre">coord2gslib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.coord2gslib" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">coord2gslib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">griddef</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.coord2gslib" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an XYZ model into GSLIB model</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
