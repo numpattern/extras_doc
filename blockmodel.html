@@ -159,13 +159,13 @@ Value(list[str or float]): Codes</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.project_points">
 <span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">project_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Project 3D points using a dictionary of keys to coord
-generated from a block model projection. All keys must be in
-points keys.</p>
+<dd><p>Flatten 3D coordinates by re-assigning coordinates of one axis
+towards a major plane (e.g. XY). It uses a dictionary to map
+the flattened coordinates. All keys must be in points keys.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<em>pd.DataFrame</em>) – composite points</p></li>
+<li><p><strong>points</strong> (<em>pd.DataFrame</em>) – DataFrame containing columns columns for x,y and z</p></li>
 <li><p><strong>bm</strong> (<em>np.array</em>) – array containing multiple xyz coordinates</p></li>
 <li><p><strong>keys</strong> (<em>dict</em>) – Obtained from project_model. Keys: pair of coordinates,
 Values: minimum coordinate at the projected axis</p></li>
@@ -182,20 +182,30 @@ to the minimum direction. x, y or z</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="extras.blockmodel.flatten.project_model">
-<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">project_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flatten a block model by projecting aligned to one of its
-grid axis. Projection in direction of minimum coordinate.</p>
+<span class="sig-prename descclassname"><span class="pre">extras.blockmodel.flatten.</span></span><span class="sig-name descname"><span class="pre">project_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projected_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extras.blockmodel.flatten.project_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten a block model by projecting coordinates of one axis
+(x,y or z) towards a major plane (e.g. XY) in direction of the
+minimum coordinates. The result is a block model flat in a face
+perpendicular to the direction of projection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>pd.DataFrame</em>) – Grid Model</p></li>
-<li><p><strong>xcol</strong> (<em>str</em>) – x-coordinate column in grid</p></li>
-<li><p><strong>ycol</strong> (<em>str</em>) – y-coordinate column in grid</p></li>
-<li><p><strong>zcol</strong> (<em>str</em>) – z-coordinate column in grid</p></li>
+<li><p><strong>xcol</strong> (<em>str</em>) – x-coordinate column in the grid</p></li>
+<li><p><strong>ycol</strong> (<em>str</em>) – y-coordinate column in the grid</p></li>
+<li><p><strong>zcol</strong> (<em>str</em>) – z-coordinate column in the grid</p></li>
 <li><p><strong>projected_axis</strong> (<em>str</em>) – Projection happens perpendicular to this axis
 to the minimum direction. Valids are x, y or z</p></li>
 <li><p><strong>offset</strong> (<em>float</em>) – additional delta added after projection</p></li>
+<li><p><strong>min</strong> (<em>bool</em>) – Projects to the direction of minimum
+(if True) or maximum coordinates (if False)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Block Model with flattened coordinates</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>model(pd.DataFrame)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -298,7 +308,17 @@ gslib addcoord, it is vectorized.</p>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DDLECCM2J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7DDLECCM2J');
+</script>
+
 
 </body>
 </html>

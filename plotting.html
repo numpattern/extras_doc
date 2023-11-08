@@ -327,7 +327,7 @@ be different. Alternatively add percentiles and summary stats.</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extras</span> <span class="k">as</span> <span class="nn">ct</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;assay_geo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">probability_plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CUpc&#39;</span><span class="p">],</span><span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">probability_plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CUpc&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -388,7 +388,17 @@ sensitivity analysis.</p>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DDLECCM2J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7DDLECCM2J');
+</script>
+
 
 </body>
 </html>
