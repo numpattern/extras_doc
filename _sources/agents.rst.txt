@@ -11,6 +11,6 @@ Cap data to certain values.
 CapAgent
 +++++++++
 
-.. automodule::  extras.transformation.capping.CapAgent
+.. automodule::  resourcegeo.transformation.capping.CapAgent
 	:imported-members:
 	:members:

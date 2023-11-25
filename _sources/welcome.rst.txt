@@ -12,9 +12,9 @@
 Welcome
 =======
 
-Welcome to Extras package `(Link) <https://test.pypi.org/project/extras/>`_. This is
-an educational Python package for resource geologists and data
-analysts. For more information, contact the development team.
+Welcome to resourcegeo package `(Link) <https://test.pypi.org/project/extras/>`_. This is
+an educational Python package for resource geologists and tasks related during data
+analysis. For more information contact the author.
 
 **Features:**
 

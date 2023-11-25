@@ -6,10 +6,10 @@ Drillholes
 Integrity
 =========
 
-.. automodule::  extras.drillholes.integrity.interval_integrity
+.. automodule::  resourcegeo.drillholes.integrity.IntervalIntegrity
 	:imported-members:
 	:members:
 
 Functions
 =========
-.. autofunction:: extras.drillholes.split_interval.split_intervals
+.. autofunction:: resourcegeo.drillholes.split_interval.split_intervals

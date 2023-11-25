@@ -7,4 +7,4 @@ Statistics
 Statistics
 ===========
 
-.. autofunction:: extras.statistics.table_statistics.stats_contvar_cat
+.. autofunction:: resourcegeo.statistics.table_statistics.stats_contvar_cat

@@ -11,9 +11,9 @@ A variety of boxplots for analysis of point data.
 Boxplots
 +++++++++
 
-.. autofunction:: extras.plots.boxplots.data_by_category
-.. autofunction:: extras.plots.boxplots.boxplot_by_category
-.. autofunction:: extras.plots.boxplots.boxplot_by_category_sensitivity
+.. autofunction:: resourcegeo.plots.boxplots.data_by_category
+.. autofunction:: resourcegeo.plots.boxplots.boxplot_by_category
+.. autofunction:: resourcegeo.plots.boxplots.boxplot_by_category_sensitivity
 
 Bar Charts
 ==========
@@ -21,7 +21,7 @@ Bar Charts.
 
 Drilling 
 +++++++++
-.. autofunction:: extras.plots.drilling.drilling_by_year
+.. autofunction:: resourcegeo.plots.drilling.drilling_by_year
 
 Scatters
 ========
@@ -29,17 +29,17 @@ Scatter plots.
 
 Resource Model 
 +++++++++++++++
-.. autofunction:: extras.plots.tongrad.tonnage_grade_curve
+.. autofunction:: resourcegeo.plots.tongrad.tonnage_grade_curve
 
 Distributions
 +++++++++++++
-.. autofunction:: extras.plots.qqplot.qq_plot
-.. autofunction:: extras.plots.probability_plot.probability_plot
+.. autofunction:: resourcegeo.plots.qqplot.qq_plot
+.. autofunction:: resourcegeo.plots.probability_plot.probability_plot
 
 Sensitivity
 ===========
 Sensitivity plots.
 
-.. autofunction:: extras.plots.deviation.deviation_plot
+.. autofunction:: resourcegeo.plots.deviation.deviation_plot
 
 

@@ -6,14 +6,14 @@ Block Model
 Block Model
 ===========
 
-.. automodule::  extras.blockmodel.blockmodel.BlockModel
+.. automodule::  resourcegeo.blockmodel.blockmodel.BlockModel
 	:imported-members:
 	:members:
 
 Flattening
 ===========
-.. autofunction:: extras.blockmodel.flatten.project_points
-.. autofunction:: extras.blockmodel.flatten.project_model
-.. autofunction:: extras.blockmodel.flatten.upscale_bm
-.. autofunction:: extras.blockmodel.flatten.gslib2coord
-.. autofunction:: extras.blockmodel.flatten.coord2gslib
+.. autofunction:: resourcegeo.blockmodel.flatten.project_points
+.. autofunction:: resourcegeo.blockmodel.flatten.project_model
+.. autofunction:: resourcegeo.blockmodel.flatten.upscale_bm
+.. autofunction:: resourcegeo.blockmodel.flatten.gslib2coord
+.. autofunction:: resourcegeo.blockmodel.flatten.coord2gslib
