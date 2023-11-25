@@ -12,7 +12,7 @@
 Welcome
 =======
 
-Welcome to resourcegeo package `(Link) <https://test.pypi.org/project/extras/>`_. This is
+Welcome to resourcegeo package `(Link) <https://pypi.org/project/resourcegeo/>`_. This is
 an educational Python package for resource geologists and tasks related during data
 analysis. For more information contact the author.
 
