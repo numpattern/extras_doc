@@ -238,7 +238,7 @@ of integers to use in the bar chart. e.g. years</p></li>
 <span class="n">drill_type</span><span class="o">=</span> <span class="s1">&#39;drilltype&#39;</span>
 <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">drill_type</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span><span class="n">drill_type</span><span class="p">]</span><span class="o">=</span> <span class="s1">&#39;Undefined&#39;</span>
 <span class="n">rs</span><span class="o">.</span><span class="n">drilling_by_year</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">var</span><span class="o">=</span><span class="s1">&#39;length&#39;</span><span class="p">,</span><span class="n">cat</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">cat2</span><span class="o">=</span><span class="n">drill_type</span><span class="p">,</span>
-           <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Collar year&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Length Drilled&#39;</span><span class="p">)</span>
+   <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Collar year&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Length Drilled&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -343,7 +343,7 @@ be different. Alternatively add percentiles and summary stats.</p>
 <p>Sensitivity plots.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.plots.deviation.deviation_plot">
-<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.deviation.</span></span><span class="sig-name descname"><span class="pre">deviation_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hline_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.deviation.deviation_plot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.deviation.</span></span><span class="sig-name descname"><span class="pre">deviation_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hline_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'base'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.deviation.deviation_plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot deviations with respect a base value after performing a
 sensitivity analysis.</p>
 <dl class="field-list simple">
@@ -352,13 +352,34 @@ sensitivity analysis.</p>
 <li><p><strong>x</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – x values of the sensitivities</p></li>
 <li><p><strong>y</strong> (<em>list</em><em>[</em><em>float</em><em>]</em>) – results  from the multiple x-values</p></li>
 <li><p><strong>base</strong> (<em>float</em>) – Reference value around where deviation is calculated.</p></li>
-<li><p><strong>title</strong> (<em>str</em>) – title of the graph</p></li>
+<li><p><strong>dev_ylim</strong> (<em>float</em>) – fraction of the base to use as +/- in (right) y-axis</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em>) – x-axis label</p></li>
+<li><p><strong>y1_label</strong> (<em>str</em>) – Left y-axis of sensitivity results</p></li>
+<li><p><strong>y2_label</strong> (<em>str</em>) – Right y-axis for percentages of deviation from base value</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>,</em><em>optional</em>) – title of the graph</p></li>
+<li><p><strong>flname</strong> (<em>str</em><em>,</em><em>optional</em>) – path to save figure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resourcegeo</span> <span class="k">as</span> <span class="nn">rs</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">ref</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">ref</span><span class="o">+</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+<span class="n">rs</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">deviation</span><span class="o">.</span><span class="n">deviation_plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">ref</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/plotting-5.png" class="plot-directive" src="_images/plotting-5.png" />
+</figure>
+</div></blockquote>
 </dd></dl>
 
 </section>
