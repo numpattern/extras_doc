@@ -256,8 +256,8 @@ of integers to use in the bar chart. e.g. years</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.plots.tongrad.tonnage_grade_curve">
 <span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.tongrad.</span></span><span class="sig-name descname"><span class="pre">tonnage_grade_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoffs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(5,</span> <span class="pre">4)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.tongrad.tonnage_grade_curve" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate tonnage-grade curve for one df of multiple dfs.
-For multiple variables within each df.</p>
+<dd><p>Generate tonnage-grade curve for one or multiple dfs,
+for multiple variables within each df.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -266,10 +266,10 @@ For multiple variables within each df.</p>
 <li><p><strong>cutoffs</strong> (<em>list</em><em>[</em><em>float</em><em>]</em><em>,</em><em>optional</em>) – cut-offs values. If None, 100 cutoffs between
 min-max values are chosen</p></li>
 <li><p><strong>weight_col</strong> (<em>str</em><em>,</em><em>optional</em>) – column-name if all dfs with values
-to weight the grade values. WARINING: Al df’s must have the same
+to weight the grade values. WARINING: All df’s must have the same
 weight_col name.</p></li>
 <li><p><strong>as_fraction</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, it shows tonnage axis as 0-1 fraction.
-If False, shows summ of the weights.</p></li>
+If False, shows the sum of the weights.</p></li>
 <li><p><strong>ylim1</strong> (<em>tuple</em>) – limit values for main y-axis (weight sum)</p></li>
 <li><p><strong>ylim2</strong> (<em>tuple</em>) – limit values for secondary y_axis (average grades above cutoff)</p></li>
 <li><p><strong>xlim</strong> (<em>tuple</em>) – limit values for x-axis (cutoffs)</p></li>
@@ -280,7 +280,21 @@ If False, shows summ of the weights.</p></li>
 <li><p><strong>figsize</strong> (<em>tuple</em>) – figsize</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
 </dl>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resourcegeo</span> <span class="k">as</span> <span class="nn">rs</span>
+<span class="n">bm</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;bm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">rs</span><span class="o">.</span><span class="n">tonnage_grade_curve</span><span class="p">(</span><span class="n">bm</span><span class="p">,</span> <span class="n">var_col</span><span class="o">=</span><span class="s1">&#39;grade1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/plotting-4.png" class="plot-directive" src="_images/plotting-4.png" />
+</figure>
+</div></blockquote>
 </dd></dl>
 
 </section>
@@ -331,7 +345,7 @@ be different. Alternatively add percentiles and summary stats.</p>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="_images/plotting-4.png" class="plot-directive" src="_images/plotting-4.png" />
+<img alt="_images/plotting-5.png" class="plot-directive" src="_images/plotting-5.png" />
 </figure>
 </div></blockquote>
 </dd></dl>
@@ -377,7 +391,7 @@ sensitivity analysis.</p>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="_images/plotting-5.png" class="plot-directive" src="_images/plotting-5.png" />
+<img alt="_images/plotting-6.png" class="plot-directive" src="_images/plotting-6.png" />
 </figure>
 </div></blockquote>
 </dd></dl>

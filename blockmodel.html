@@ -145,7 +145,24 @@ Value(list[str or float]): Codes</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Resource reporting</p>
+<dd class="field-even"><p><p>Resource reporting</p>
+<blockquote>
+<div><p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resourcegeo</span> <span class="k">as</span> <span class="nn">rs</span>
+<span class="n">bm</span>  <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;bm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">BlockModel</span><span class="p">(</span><span class="n">bm</span><span class="p">,</span><span class="n">dx</span><span class="o">=</span><span class="s1">&#39;dx&#39;</span><span class="p">,</span><span class="n">dy</span><span class="o">=</span><span class="s1">&#39;dy&#39;</span><span class="p">,</span><span class="n">dz</span><span class="o">=</span><span class="s1">&#39;dz&#39;</span><span class="p">)</span>
+
+<span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;grade1&#39;</span><span class="p">:{</span><span class="s1">&#39;cutoff&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}}</span>
+<span class="n">mined_out</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mined&#39;</span><span class="p">:[[</span><span class="s1">&#39;mined&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;mined&#39;</span><span class="p">,</span><span class="s1">&#39;unmined&#39;</span><span class="p">]]}</span>
+<span class="n">otype_code</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;otype&#39;</span><span class="p">:[[</span><span class="s1">&#39;Oxide&#39;</span><span class="p">],[</span><span class="s1">&#39;Sulfide&#39;</span><span class="p">]]}</span>
+<span class="n">classif</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;classification&#39;</span><span class="p">:[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]}</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="nb">vars</span><span class="o">=</span><span class="n">grades</span><span class="p">,</span><span class="n">density_col</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span><span class="n">mined_out</span><span class="o">=</span><span class="n">mined_out</span><span class="p">,</span>
+                        <span class="n">classif_code</span><span class="o">=</span><span class="n">classif</span><span class="p">,</span> <span class="n">otype_code</span><span class="o">=</span><span class="n">otype_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>self.summary(pd.DataFrame)</p>

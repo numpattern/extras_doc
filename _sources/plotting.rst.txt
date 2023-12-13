@@ -21,6 +21,7 @@ Bar Charts.
 
 Drilling 
 +++++++++
+
 .. autofunction:: resourcegeo.plots.drilling.drilling_by_year
 
 Scatters
