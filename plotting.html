@@ -135,18 +135,28 @@ df_labels (list[str]) : Categorical labels</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.plots.boxplots.boxplot_by_category">
-<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.boxplots.boxplot_by_category" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot boxplots of by category. Optionally add unweighted
-statistics.</p>
+<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats_ycoord</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.boxplots.boxplot_by_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Univariate. Boxplots by category. Optionally add number and unweighted
+mean to the plot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – df with values and category column</p></li>
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – df with values and a category column</p></li>
 <li><p><strong>var</strong> (<em>str</em>) – column name for variable</p></li>
 <li><p><strong>catcol</strong> (<em>str</em>) – column name for category column</p></li>
 <li><p><strong>cats</strong> (<em>optional</em>) – Categories to consider from catcol</p></li>
-<li><p><strong>tmin</strong> (<em>float</em><em>, </em><em>optional</em>) – Minumum var value to filter data</p></li>
-<li><p><strong>yscale</strong> (<em>str</em>) – y-axis scale</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>optional</em>) – x-label</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>optional</em>) – y-label</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>,</em><em>optional</em>) – figsize</p></li>
+<li><p><strong>flname</strong> (<em>str</em><em>, </em><em>optional</em>) – path to save file if not None</p></li>
+<li><p><strong>stats</strong> (<em>bool</em><em>,</em><em>optional</em>) – Show number and unweighted mean for each box plot</p></li>
+<li><p><strong>yscale</strong> (<em>str</em><em>, </em><em>optional</em>) – y-axis scale</p></li>
+<li><p><strong>stats_ycoord</strong> (<em>float</em><em>, </em><em>optional</em>) – bottom coordinate to add the stats (count and mean).
+The mean is unweighted.</p></li>
+<li><p><strong>tmin</strong> (<em>float</em><em>, </em><em>optional</em>) – Minumum var value to filter out values</p></li>
+<li><p><strong>use_all</strong> (<em>bool</em><em>, </em><em>optional</em>) – If False, plot boxplots only for categories with &gt;0 number
+of data. If True, it shows all boxplots. If tmin is not None, then
+tmin is applied before use_all.</p></li>
 </ul>
 </dd>
 </dl>
@@ -155,8 +165,8 @@ statistics.</p>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resourcegeo</span> <span class="k">as</span> <span class="nn">rs</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">BaseData</span><span class="p">(</span><span class="s1">&#39;assay_geo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">boxplot_by_category</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;CUpc&#39;</span><span class="p">,</span><span class="n">catcol</span> <span class="o">=</span> <span class="s1">&#39;UNIT&#39;</span><span class="p">,</span>
-        <span class="n">tmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">markersize_mean</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">markersize_flier</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">widths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">stats</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">use_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;CUpc&#39;</span><span class="p">)</span>
+        <span class="n">tmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">markersize_flier</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">widths</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">markersize_mean</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">stats_ycoord</span><span class="o">=-</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">stats</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_all</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -167,15 +177,26 @@ statistics.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.plots.boxplots.boxplot_by_category_sensitivity">
-<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulkstats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.boxplots.boxplot_by_category_sensitivity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Grouped boxplots for one-variable grouped by categories. Useful
-for sensitivity results.</p>
+<span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.boxplots.</span></span><span class="sig-name descname"><span class="pre">boxplot_by_category_sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catcol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_flier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulkstats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats_ycoord</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.boxplots.boxplot_by_category_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Univariate. Grouped boxplots by categories. It can be used to
+analyze sensitivity results.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dfs</strong> (<em>list</em><em>[</em><em>pd.DataFrame</em><em>]</em>) – list of DataFrame(s)</p></li>
 <li><p><strong>var</strong> (<em>str</em>) – shared variable column-name in all df in dfs</p></li>
 <li><p><strong>catcol</strong> (<em>str</em>) – shared category column in all df in dfs</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – title of the graph</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em><em>, </em><em>optional</em>) – x-label</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>optional</em>) – y-label</p></li>
+<li><p><strong>flname</strong> (<em>str.</em><em>, </em><em>optional</em>) – path to save file if not None</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – figsize</p></li>
+<li><p><strong>bulkstats</strong> (<em>bool</em><em>, </em><em>optional</em>) – show number and unweighted mean</p></li>
+<li><p><strong>ylim</strong> (<em>tuple</em><em>, </em><em>optional</em>) – y-axis coordinate limits. If bulkstats is True,
+you may need to use a lower y-minimum coordinate.</p></li>
+<li><p><strong>stats_ycoord</strong> (<em>float</em>) – bottom coordinate to add the stats (count and mean).
+The mean is unweighted.</p></li>
+<li><p><strong>coverage</strong> (<em>float</em><em>, </em><em>optional</em>) – width of boxes expresed as fraction from 0 to 1.</p></li>
 </ul>
 </dd>
 </dl>
@@ -189,7 +210,8 @@ for sensitivity results.</p>
 <span class="n">df4</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">df4</span><span class="p">[</span><span class="s1">&#39;CUpc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s1">&#39;CUpc&#39;</span><span class="p">]</span> <span class="o">+</span><span class="mf">0.2</span>
 <span class="n">dfs</span> <span class="o">=</span> <span class="p">[</span><span class="n">df2</span><span class="p">,</span><span class="n">df3</span><span class="p">,</span><span class="n">df4</span><span class="p">]</span>
-<span class="n">rs</span><span class="o">.</span><span class="n">boxplot_by_category_sensitivity</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span><span class="s1">&#39;CUpc&#39;</span><span class="p">,</span><span class="s1">&#39;UNIT&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">rs</span><span class="o">.</span><span class="n">boxplot_by_category_sensitivity</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span><span class="s1">&#39;CUpc&#39;</span><span class="p">,</span><span class="s1">&#39;UNIT&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+        <span class="n">coverage</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">bulkstats</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">stats_ycoord</span><span class="o">=-</span><span class="mf">0.6</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -318,22 +340,30 @@ be different. Alternatively add percentiles and summary stats.</p>
 <li><p><strong>figsize</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – figure size</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
 </dl>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">resourcegeo</span> <span class="k">as</span> <span class="nn">rs</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">rs</span><span class="o">.</span><span class="n">qq_plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">700</span><span class="p">))</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/plotting-5.png" class="plot-directive" src="_images/plotting-5.png" />
+</figure>
+</div></blockquote>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.plots.probability_plot.probability_plot">
 <span class="sig-prename descclassname"><span class="pre">resourcegeo.plots.probability_plot.</span></span><span class="sig-name descname"><span class="pre">probability_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.plots.probability_plot.probability_plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a probability plot of an input distribution.</p>
+<dd><p>Probability plot of a univariate distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – input data to plot</p></li>
+<li><p><strong>data</strong> (<em>np.array</em><em>, </em><em>pd.Series</em>) – values</p></li>
 <li><p><strong>figsize</strong> (<em>tuple</em>) – Figure size</p></li>
-<li><p><strong>xscale</strong> (<em>str</em>) – x-axis scale, it can be ‘log’ or ‘linear’</p></li>
+<li><p><strong>xscale</strong> (<em>str</em><em>, </em><em>optional</em>) – x-axis scale, it can be ‘log’ or ‘linear’</p></li>
 </ul>
 </dd>
 </dl>
@@ -345,7 +375,7 @@ be different. Alternatively add percentiles and summary stats.</p>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="_images/plotting-5.png" class="plot-directive" src="_images/plotting-5.png" />
+<img alt="_images/plotting-6.png" class="plot-directive" src="_images/plotting-6.png" />
 </figure>
 </div></blockquote>
 </dd></dl>
@@ -391,7 +421,7 @@ sensitivity analysis.</p>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="_images/plotting-6.png" class="plot-directive" src="_images/plotting-6.png" />
+<img alt="_images/plotting-7.png" class="plot-directive" src="_images/plotting-7.png" />
 </figure>
 </div></blockquote>
 </dd></dl>
