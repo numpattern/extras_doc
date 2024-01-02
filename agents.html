@@ -58,7 +58,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Agents</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#capping">5.1. Capping</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#module-resourcegeo.transformation.capping.CapAgent">5.1.1. CapAgent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#resourcegeo.transformation.capping.CapAgent.compare_unistats"><code class="docutils literal notranslate"><span class="pre">compare_unistats()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resourcegeo.transformation.capping.CapAgent.fit"><code class="docutils literal notranslate"><span class="pre">fit()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resourcegeo.transformation.capping.CapAgent.fit_apply"><code class="docutils literal notranslate"><span class="pre">fit_apply()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resourcegeo.transformation.capping.CapAgent.sensitivity"><code class="docutils literal notranslate"><span class="pre">sensitivity()</span></code></a></li>
@@ -109,20 +108,6 @@
 parameters. Arguments can be later specified with self.fit()
 method.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="resourcegeo.transformation.capping.CapAgent.compare_unistats">
-<span class="sig-prename descclassname"><span class="pre">resourcegeo.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">compare_unistats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wt_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.transformation.capping.CapAgent.compare_unistats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a record of original_values statistics</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>weights</strong> – 1-D np.array for the weights.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="resourcegeo.transformation.capping.CapAgent.fit">
 <span class="sig-prename descclassname"><span class="pre">resourcegeo.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">greater_than</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">less_than</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cap_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.transformation.capping.CapAgent.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define required capping parameters.</p>
@@ -149,7 +134,8 @@ method.</p>
 <dt class="sig sig-object py" id="resourcegeo.transformation.capping.CapAgent.fit_apply">
 <span class="sig-prename descclassname"><span class="pre">resourcegeo.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">fit_apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_cap'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.transformation.capping.CapAgent.fit_apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cap values of values in a dataframe column. It requires the fitting
-parameters previously specified with self.fit()</p>
+parameters previously specified with self.fit(). It does not
+require and does not change initialized weights.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -193,7 +179,8 @@ It must be same length than the data.</p></li>
 <span class="sig-prename descclassname"><span class="pre">resourcegeo.transformation.capping.CapAgent.</span></span><span class="sig-name descname"><span class="pre">sensitivity_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resourcegeo.transformation.capping.CapAgent.sensitivity_plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a set of four plots for capping sensitivity analysis.
 Plot a user defined vertical capping line in the graph and
-show the closest response to that value.</p>
+show the closest response to that value. If weights were used in sensitivity(),
+then the statistics in the histogram and the probability plot are weighted.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -216,7 +203,6 @@ it corresponds to the closest capping value to line_at</p></li>
 <span class="n">capped</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">CapAgent</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">greater_than</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cap_to</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">subset_col</span><span class="o">=</span><span class="s1">&#39;rock&#39;</span><span class="p">,</span><span class="n">subset_code</span><span class="o">=</span><span class="s1">&#39;MXPRI&#39;</span><span class="p">)</span>
 <span class="n">capped</span><span class="o">.</span><span class="n">fit_apply</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;CUpc&#39;</span><span class="p">)</span>
 <span class="n">capped</span><span class="o">.</span><span class="n">sensitivity</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">wt_col</span><span class="o">=</span><span class="s1">&#39;ai&#39;</span><span class="p">)</span>
-<span class="n">capped</span><span class="o">.</span><span class="n">compare_unistats</span><span class="p">()</span>
 <span class="n">capped</span><span class="o">.</span><span class="n">sensitivity_plot</span><span class="p">(</span><span class="n">line_at</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>

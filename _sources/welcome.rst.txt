@@ -165,10 +165,10 @@ Gallery
 .. raw:: html
 
     <a href=./plotting.html#automod>
-    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+    <div style="background-image: url(./_images/plotting-5.png); background-repeat:no-repeat; background-size: contain"
          class='figure align-center'>
     <span class='figure-label'>
-    <p>image_label</p>
+    <p>qqplot</p>
     </span>
     </div>
     </a>
@@ -176,10 +176,10 @@ Gallery
 .. raw:: html
 
     <a href=./plotting.html#automod>
-    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+    <div style="background-image: url(./_images/plotting-6.png); background-repeat:no-repeat; background-size: contain"
          class='figure align-center'>
     <span class='figure-label'>
-    <p>image_label</p>
+    <p>probplot</p>
     </span>
     </div>
     </a>
@@ -187,10 +187,10 @@ Gallery
 .. raw:: html
 
     <a href=./plotting.html#automod>
-    <div style="background-image: url(./_static/logo.png); background-repeat:no-repeat; background-size: contain"
+    <div style="background-image: url(./_images/plotting-7.png); background-repeat:no-repeat; background-size: contain"
          class='figure align-center'>
     <span class='figure-label'>
-    <p>image_label</p>
+    <p>deviationplot</p>
     </span>
     </div>
     </a>
